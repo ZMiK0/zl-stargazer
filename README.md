@@ -16,6 +16,8 @@ My first "from scratch" hyprland rice.
 - Wofi
 - Wlogout
 - Kitty
+- Swaync
+> Power profiles needed for waybar module
 
 ### Other
 
