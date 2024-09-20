@@ -1,0 +1,101 @@
+
+/*rgb(37, 37, 37) Fondo*/
+/*#63a847 Verde*/
+
+* {
+	font-size: 14px;
+    font-weight: bold;
+	font-family: "JetBrainsMono Nerd Font";
+    min-height: 0px;
+}
+
+window#waybar {
+    color: #fbf1c7;
+    background-color: #1d2021;
+    border-radius: 0px;
+	
+}
+
+tooltip {
+    color: #fbf1c7;
+    background: #282828;
+    opacity: 1;
+}
+
+
+#izq, #der {
+    background-color: #1d2021;
+    /*
+    border-bottom: #63a847 2 solid;
+    border-right: #63a847 2 solid;
+    border-left: #63a847 2 solid;
+    */
+}
+
+#workspaces {
+    padding: 4px; /*0.3*/
+}
+
+#workspaces label {
+  font-size: 12px;
+}
+
+#workspaces button {
+    color: #fbf1c7;
+    background-color: #282828; 
+    border-radius: 2px;
+    min-width: 25px;
+    padding: 0;
+    margin: 0 2px 0 2px;
+}
+
+#workspaces button.active {
+    color: #282828;
+    background-color: #fbf1c7;
+}
+
+#workspaces button.urgent {
+    color: #11111b;
+    background: #9e1616;
+}
+
+#custom-discord, #power-profiles-daemon {
+    margin-right: 5px;
+}
+
+#battery {
+    margin-right: 4px;
+}
+
+#battery.warning {
+    color: rgb(255, 225, 91);
+}
+
+#battery.critical {
+    color: rgb(202, 0, 0);
+}
+
+#disk,#memory,#cpu,
+#pulseaudio,
+#backlight,
+#power-profiles-daemon,
+#battery,
+#custom-lock,
+#custom-notificationCenter,
+#tray {
+    margin: 4 2px 4 2px;
+    opacity: 1;
+    min-width: 25px;
+}
+
+#tray {
+    margin-right: 4px;
+}
+
+
+
+#custom-poweroff {
+    padding-left: 10px;
+}
+
+

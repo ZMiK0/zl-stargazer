@@ -4,33 +4,25 @@
 
 * {
 	font-size: 14px;
-	font-weight: bold;
-	font-family: "SUSE", "JetBrainsMono Nerd Font";
+    font-weight: bold;
+	font-family: "SUSE JetBrainsMono Nerd Font";
     min-height: 0px;
 }
 
 window#waybar {
-    color: #ffffff;
-    background-color: rgba(37, 37, 37, 0.699);
+    color: #fbf1c7;
+    background-color: rgba(30, 30, 46, 0);
     border-radius: 0px;
 	
 }
 
 tooltip {
-    color: #ffffff;
-    background: #282828;
+    color: #fbf1c7;
+    background: #1d2021;
     opacity: 1;
 }
 
 
-#izq, #der {
-    background-color: rgba(37, 37, 37, 0);
-    /*
-    border-bottom: #63a847 2 solid;
-    border-right: #63a847 2 solid;
-    border-left: #63a847 2 solid;
-    */
-}
 
 #workspaces {
     padding: 4px; /*0.3*/
@@ -41,26 +33,45 @@ tooltip {
 }
 
 #workspaces button {
-    color: #ffffff;
-    background-color: rgba(26, 27, 37, 0.494); 
-    border-radius: 0px;
+    color: #fbf1c7;
+    background-color: #282828; 
+    border-radius: 2px;
     min-width: 25px;
     padding: 0;
     margin: 0 2px 0 2px;
 }
 
 #workspaces button.active {
-    color: #000000;
-    background-color: #cccccc;
+    color: #1e1e2e;
+    background-color: #928374;
 }
 
 #workspaces button.urgent {
-    color: #11111b;
-    background: #9e1616;
+    color: #fbf1c7;
+    background: #fb4934;
 }
 
 #custom-discord, #power-profiles-daemon {
     margin-right: 5px;
+}
+
+#izq2 {
+    margin-left: 8px;
+}
+
+#der2 {
+    margin-right: 8px;
+}
+
+#izq, #izq2, #der, #der2 {
+    background-color: #1d2021;
+    border: #928374 2 solid;
+    border-bottom: none;
+    border-radius: 2px;
+}
+
+#izq2, #cen, #der, #der2 {
+    padding: 0px 4px 0px 4px;
 }
 
 #battery {
@@ -68,12 +79,13 @@ tooltip {
 }
 
 #battery.warning {
-    color: rgb(255, 225, 91);
+    color: #fabd2f;
 }
 
 #battery.critical {
-    color: rgb(202, 0, 0);
+    color: #fb4934;
 }
+
 
 #disk,#memory,#cpu,
 #pulseaudio,
@@ -85,8 +97,12 @@ tooltip {
 #tray {
     margin: 4 2px 4 2px;
     opacity: 1;
-    color: #ffffff;
     min-width: 25px;
+}
+
+#clock, #window {
+    color: #fbf1c7;
+    padding-top: 4px;
 }
 
 #tray {
@@ -96,6 +112,7 @@ tooltip {
 
 
 #custom-poweroff {
+    color: #fb4934;
     padding-left: 10px;
 }
 

@@ -1,5 +1,5 @@
 width=800
-height=400
+height=414
 location=center
 show=drun
 prompt=Buscar...
@@ -14,7 +14,7 @@ insensitive=true
 allow_images=true
 image_size=32
 gtk_dark=true
-normal_window=false
+normal_window=true
 columns = 1
 hide_search = false
 hide_scroll = true

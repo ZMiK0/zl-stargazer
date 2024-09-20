@@ -1,0 +1,130 @@
+{
+    "name": "topbar",
+    "layer": "top",
+    "position": "top",
+    "gtk-layer-shell": true,
+    "height": 32,
+    "width": 1904,
+    "margin-top": 8,
+    "margin-left": 0,
+    "modules-left": ["group/izq"],
+    "modules-center": ["clock"],
+    "modules-right": ["group/der"],
+    "hyprland/window": {
+      "format": "{}",
+      "rotate": 90
+    },
+
+    "group/izq": {
+      "orientation": "horizontal",
+      "modules": ["custom/poweroff","hyprland/workspaces"]
+    },
+
+    "group/der": {
+      "orientation": "horizontal",
+      "modules": ["cpu","memory","disk","tray","pulseaudio#sink","backlight","power-profiles-daemon","battery","custom/notificationCenter"]
+    },
+
+    "disk": {
+      "path": "/",
+      "format": "{specific_used:0.0f} Gb  ",
+      "unit": "GB"
+    },
+
+    "memory": {
+      "format": "{used:0.1f}Gib/{total:0.1f}Gib  " ,
+      "interval": 10
+    },
+
+    "cpu": {
+      "format": "{usage}%  "
+    },
+  
+    "hyprland/workspaces": {
+      "disable-scroll": false,
+      "all-outputs": true,
+      "on-click": "activate",
+      "persistent-workspaces": {"*":[1,2,3,4]}
+    },
+  
+    "clock": {
+      "format": "{:%A, %B %e %Y,  %H:%M}",
+      "tooltip": false,
+      "tooltip-format": "{: %A, %B %e %Y}",
+      "timezone": "Europe/Madrid"
+  },
+  
+    "pulseaudio#sink": {
+      "format": "{icon}{volume}%",
+      "format-muted": " ",
+      "format-bluetooth": "{icon}   {volume}%",
+      "format-icons": {
+        "headphones": [" ", " ", " "],
+        "headset": [" ", " ", " "],
+        "default": [" ", " ", " "]
+      },
+      "tooltip": false,
+      "tooltip-format": "{volume}%",
+      "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "on-click-right": "/usr/bin/pavucontrol",
+      "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +0.5%",
+      "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -0.5%"
+    },
+  
+    "backlight": {
+      "format": "{icon} {percent}%",
+      "format-icons": ["󰃞", "󰃟", "󰃠"],
+      "tooltip": false,
+      "tooltip-format": "{percent}%"
+    },
+  
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip": true,
+      "tooltip-format": "Modo: {profile}",
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": " ",
+        "power-saver": "" 
+      }
+    },
+    
+    "battery": {
+      "states": {
+        "good": 95,
+        "warning": 20,
+        "critical": 10
+      },
+      "tooltip":false,
+      "tooltip-format": "{capacity}%",
+      "format": "{icon}{capacity}%",
+      "format-charging": " ",
+      "format-plugged": " ",
+      "format-icons": [" ", " ", " ", " ", " "]
+    },
+  
+    "tray": {
+      "icon-size": 18,
+      "spacing": 5
+    },
+  
+    "custom/notificationCenter": {
+      "on-click": "swaync-client -t -sw",
+      "format": "",
+      "tooltip": false
+    },
+  
+    "custom/lock": {
+      "on-click": "hyprlock",
+      "format": " ",
+      "tooltip": false
+    },
+  
+    "custom/poweroff": {
+      "on-click": "wlogout --protocol layer-shell",
+      "format": "⏻ ",
+      "tooltip": false
+    }
+  
+  }
